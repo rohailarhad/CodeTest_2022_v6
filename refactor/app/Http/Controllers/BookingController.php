@@ -31,6 +31,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function index(Request $request)
@@ -61,6 +62,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function store(Request $request)
@@ -76,6 +78,7 @@ class BookingController extends Controller
     /**
      * @param $id
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function update($id, Request $request)
@@ -89,6 +92,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function immediateJobEmail(Request $request)
@@ -103,6 +107,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function getHistory(Request $request)
@@ -118,6 +123,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function acceptJob(Request $request)
@@ -142,6 +148,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function cancelJob(Request $request)
@@ -156,6 +163,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function endJob(Request $request)
@@ -180,6 +188,7 @@ class BookingController extends Controller
 
     /**
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return mixed
      */
     public function getPotentialJobs(Request $request)
@@ -191,6 +200,13 @@ class BookingController extends Controller
 
         return response($response);
     }
+
+    /**
+     * @param Request $request
+     * Here we can use a FormRequest Class to validate request before passing it to function.
+     * This function is orphan not realted to class name or using repositary class so this could be moved to some generic class
+     * @return mixed
+     */
 
     public function distanceFeed(Request $request)
     {
@@ -254,6 +270,12 @@ class BookingController extends Controller
         return response('Record updated!');
     }
 
+    /**
+     * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
+     * @return mixed
+     */
+
     public function reopen(Request $request)
     {
         $data = $request->all();
@@ -261,6 +283,12 @@ class BookingController extends Controller
 
         return response($response);
     }
+
+    /**
+     * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
+     * @return mixed
+     */
 
     public function resendNotifications(Request $request)
     {
@@ -275,6 +303,7 @@ class BookingController extends Controller
     /**
      * Sends SMS to Translator
      * @param Request $request
+    * Here we can use a FormRequest Class to validate request before passing it to function.
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
      */
     public function resendSMSNotifications(Request $request)
